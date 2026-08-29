@@ -1,66 +1,165 @@
-def sigmoid(z):
-    e = 2.718281828459045 
-    return 1 / (1 + e ** (-z))
+import math
+import random
 
-def neuron_forward(inputs, weights, bias):
-    weighted_sum = 0
-    for x, w in zip(inputs, weights):
-        weighted_sum += x * w
-    z = weighted_sum + bias
-    return sigmoid(z)
+class Value:
+    def __init__(self, data, _children=(), _op=''):
+        self.data = data
+        self.grad = 0.0
+        self._prev = set(_children)
+        self._op = _op
+        self._backward = lambda: None
 
-def layer_forward(inputs, weights, biases):
-    outputs = []
-    for neuron_weights, neuron_bias in zip(weights, biases):
-        output = neuron_forward(inputs, neuron_weights, neuron_bias)
-        outputs.append(output)
-    return outputs
+    def __repr__(self):
+        return f"Value(data={self.data})"
 
-def mse_loss(outputs, targets):
-    total = 0
-    for output, target in zip(outputs, targets):
-        total += (output - target) ** 2
-    return total / len(outputs)
+    def __add__(self, other):
+        other = other if isinstance(other, Value) else Value(other)
+        out = Value(self.data + other.data, (self, other), '+')
 
-# Sabit değerler 
-inputs = [0.5, 0.8, 0.2]
-targets = [0, 1]
-biases = [0.1, -0.2]
+        def _backward():
+            self.grad += 1.0 * out.grad
+            other.grad += 1.0 * out.grad
+        out._backward = _backward
+        return out
 
-base_weights = [
-    [0.4, -0.6, 0.9],   # nöron 1 (sabit)
-    [0.1, 0.7, -0.3],   # nöron 2 (w0'ı optimize edeceğiz)
+    def __radd__(self, other):
+        return self + other
+
+    def __mul__(self, other):
+        other = other if isinstance(other, Value) else Value(other)
+        out = Value(self.data * other.data, (self, other), '*')
+
+        def _backward():
+            self.grad += other.data * out.grad
+            other.grad += self.data * out.grad
+        out._backward = _backward
+        return out
+
+    def __rmul__(self, other):
+        return self * other
+
+    def __pow__(self, other):
+        assert isinstance(other, (int, float))
+        out = Value(self.data ** other, (self,), f'**{other}')
+
+        def _backward():
+            self.grad += (other * self.data ** (other - 1)) * out.grad
+        out._backward = _backward
+        return out
+
+    def __neg__(self):
+        return self * -1
+
+    def __sub__(self, other):
+        return self + (-other)
+
+    def __truediv__(self, other):
+        return self * other ** -1
+
+    def tanh(self):
+        x = self.data
+        t = (math.exp(2 * x) - 1) / (math.exp(2 * x) + 1)
+        out = Value(t, (self,), 'tanh')
+
+        def _backward():
+            self.grad += (1 - t ** 2) * out.grad
+        out._backward = _backward
+        return out
+
+    def backward(self):
+        topo = []
+        visited = set()
+
+        def build_topo(v):
+            if v not in visited:
+                visited.add(v)
+                for child in v._prev:
+                    build_topo(child)
+                topo.append(v)
+
+        build_topo(self)
+        self.grad = 1.0
+        for node in reversed(topo):
+            node._backward()
+
+# Neuron, Layer ve MLP (videodaki sıralarıyla aynı, ama Value sınıfını kullanıyor)
+class Neuron:
+    def __init__(self, nin):
+        self.w = [Value(random.uniform(-1, 1)) for _ in range(nin)]
+        self.b = Value(random.uniform(-1, 1))
+
+    def __call__(self, x):
+        act = sum((wi * xi for wi, xi in zip(self.w, x)), self.b)
+        out = act.tanh()
+        return out
+
+    def parameters(self):
+        return self.w + [self.b]
+
+class Layer:
+    def __init__(self, nin, nout):
+        self.neurons = [Neuron(nin) for _ in range(nout)]
+
+    def __call__(self, x):
+        outs = [n(x) for n in self.neurons]
+        return outs[0] if len(outs) == 1 else outs
+
+    def parameters(self):
+        return [p for neuron in self.neurons for p in neuron.parameters()]
+
+class MLP:
+    def __init__(self, nin, nouts):
+        sz = [nin] + nouts
+        self.layers = [Layer(sz[i], sz[i + 1]) for i in range(len(nouts))]
+
+    def __call__(self, x):
+        for layer in self.layers:
+            x = layer(x)
+        return x
+
+    def parameters(self):
+        return [p for layer in self.layers for p in layer.parameters()]
+
+# Videodaki küçük veri setini kullanalım ve MLP'yi eğitelim
+random.seed(42)
+
+xs = [
+    [2.0, 3.0, -1.0],
+    [3.0, -1.0, 0.5],
+    [0.5, 1.0, 1.0],
+    [1.0, 1.0, -1.0],
 ]
+ys = [1.0, -1.0, -1.0, 1.0]
 
-def compute_loss_for_weight(w):
-    # nöron 2'nin ilk ağırlığını w yapıp, gerisini sabit tutalım
-    weights = [
-        base_weights[0][:],
-        [w, base_weights[1][1], base_weights[1][2]],
-    ]
-    outputs = layer_forward(inputs, weights, biases)
-    return mse_loss(outputs, targets)
+n = MLP(3, [4, 4, 1])
+print("Toplam parametre sayısı:", len(n.parameters()))
 
-def numerical_gradient(w):
-    h = 0.0001
-    loss1 = compute_loss_for_weight(w)
-    loss2 = compute_loss_for_weight(w + h)
-    return (loss2 - loss1) / h
+ypred = [n(x) for x in xs]
+print("\nEğitim öncesi tahminler:", [round(p.data, 4) for p in ypred])
 
-# Gradient Descent Döngüsü
-w = 0.1              # başlangıç değerimiz
-learning_rate = 1.0
-steps = 50
 
-print(f"Başlangıç: w = {w:.4f}, loss = {compute_loss_for_weight(w):.4f}")
+# Eğitim döngüsü: gradient descent ile parametreleri güncelleyelşm
+for k in range(20):
+    # --- forward pass ---
+    ypred = [n(x) for x in xs]
+    loss = sum((yout - ygt) ** 2 for ygt, yout in zip(ys, ypred))
 
-for i in range(steps):
-    loss = compute_loss_for_weight(w)
-    grad = numerical_gradient(w)
+    # gradyanları sıfırla (videodaki meşhur bug burada önleniyor)
+    # _backward fonksiyonları grad'ı += ile biriktiriyor, bu yüzden her adımda önce sıfırlamazsak
+    # bir önceki adımın gradyanı bir sonrakine eklenir ve eğitim tamamen bozulur.
+    for p in n.parameters():
+        p.grad = 0.0
 
-    w = w - learning_rate * grad
+    # --- backward pass ---
+    loss.backward()
 
-    if i % 5 == 0 or i == steps - 1:
-        print(f"Adım {i:2d}: w = {w:.4f}, loss = {loss:.6f}, gradient = {grad:.4f}")
+    # --- update: her parametreyi gradyanının tersi yönünde kaydır ---
+    learning_rate = 0.1
+    for p in n.parameters():
+        p.data += -learning_rate * p.grad
 
-print(f"\nSon durum: w = {w:.4f}, loss = {compute_loss_for_weight(w):.6f}")
+    print(f"adım {k:2d}  loss = {loss.data:.6f}")
+
+ypred = [n(x) for x in xs]
+print("\nEğitim sonrası tahminler:", [round(p.data, 4) for p in ypred])
+print("Hedefler                :", ys)

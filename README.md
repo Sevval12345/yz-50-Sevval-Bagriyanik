@@ -48,3 +48,38 @@ YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynakl
 4. **Sinir Ağı Tabanlı Bigram:** One-hot encoding girdi, 27x27 ağırlık matrisi, Softmax aktivasyonu, NLL loss ve gradient descent döngüsü ile tek katmanlı yapay sinir ağının kurulup sayım modeli loss'una yakınsamasının incelenmesi. *(1:02:57 - 1:54:31)*
 5. **Türkçe Karakter Genişletmesi:** Alfabenin Türkçe karakterlerle (`ç, ğ, ı, ö, ş, ü`) genişletilerek açık kaynak Türkçe isim veri kümesi üzerinde her iki yaklaşımın (sayım & sinir ağı) eğitilmesi ve üretilen isimlerin incelenmesi.
 6. **Ek Görev (Trigram Modeli):** İki önceki harfi dikkate alan trigram modelinin geliştirilmesi; verinin Train / Dev / Test (%80 / %10 / %10) olarak ayrılıp geliştirme kümesi kaybına göre smoothing hiperparametre optimizasyonu yapılması.
+
+   ```mermaid
+graph LR
+    classDef io fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
+    classDef model fill:#0f172a,stroke:#818cf8,stroke-width:2px,color:#fff;
+    classDef loss fill:#311313,stroke:#f87171,stroke-width:2px,color:#fff;
+
+    subgraph INPUT ["Girdi"]
+        X_char["Harf: 'e' (id: 4)"]:::io
+        X_onehot["One-Hot Vektör x<br/>[0, 0, ..., 1, ..., 0]<br/>(1 × 27)"]:::io
+    end
+
+    subgraph NETWORK ["Tek Katmanlı Sinir Ağı"]
+        W["Ağırlık Matrisi W<br/>(27 × 27)"]:::model
+        Logits["Logits y = x @ W<br/>(1 × 27)"]:::model
+        Softmax["Softmax<br/>exp(y) / sum"]:::model
+        Probs["Olasılıklar p<br/>[p₀, ..., p₂₆]"]:::model
+    end
+
+    subgraph LOSS ["Kayıp & Güncelleme"]
+        Y_char["Hedef Harf: 'm' (id: 12)"]:::io
+        NLL["Negative Log Likelihood<br/>loss = -log(p[12])"]:::loss
+        Backward["loss.backward()<br/>W.grad hesaplanır"]:::loss
+    end
+
+    X_char --> X_onehot
+    X_onehot -->|lookup / çarpım| W
+    W --> Logits
+    Logits --> Softmax
+    Softmax --> Probs
+    Probs --> NLL
+    Y_char --> NLL
+    NLL --> Backward
+    Backward -.->|Gradient Descent: W = W - lr * W.grad| W
+```

@@ -1,4 +1,4 @@
-# bigram_counting1.py + bigram_counting2.py + bigram_counting3.py + bigram_counting4.py = bigram_counting5.py
+# bigram_counting1.py + bigram_counting2.py + bigram_counting3.py + bigram_counting4.py + bigram_counting5.py = bigram_counting.py
 
 import torch
 import matplotlib.pyplot as plt

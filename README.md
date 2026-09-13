@@ -1,4 +1,5 @@
 # YZ-50 Yapay Zeka Çalışmaları
+**https://yz50.ai/**
 
 YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynaklar yer almaktadır.
 
@@ -48,3 +49,21 @@ YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynakl
 4. **Sinir Ağı Tabanlı Bigram:** One-hot encoding girdi, 27x27 ağırlık matrisi, Softmax aktivasyonu, NLL loss ve gradient descent döngüsü ile tek katmanlı yapay sinir ağının kurulup sayım modeli loss'una yakınsamasının incelenmesi. *(1:02:57 - 1:54:31)*
 5. **Türkçe Karakter Genişletmesi:** Alfabenin Türkçe karakterlerle (`ç, ğ, ı, ö, ş, ü`) genişletilerek açık kaynak Türkçe isim veri kümesi üzerinde her iki yaklaşımın (sayım & sinir ağı) eğitilmesi ve üretilen isimlerin incelenmesi.
 6. **Ek Görev (Trigram Modeli):** İki önceki harfi dikkate alan trigram modelinin geliştirilmesi; verinin Train / Dev / Test (%80 / %10 / %10) olarak ayrılıp geliştirme kümesi kaybına göre smoothing hiperparametre optimizasyonu yapılması.
+
+## Hafta 4: MLP Dil Modeli & Eğitim İçgörüleri (Bengio 2003 - makemore Part 2 & 3)
+
+### Kaynaklar
+- [Andrej Karpathy - Building makemore Part 2: MLP](https://www.youtube.com/watch?v=TCH_1BHY58I)
+- [Andrej Karpathy - Building makemore Part 3: Activations & Gradients, BatchNorm](https://www.youtube.com/watch?v=P6sfmUTpUmc)
+- [Bengio et al. - A Neural Probabilistic Language Model (2003)](https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf)
+- [Andrej Karpathy - makemore Reposu](https://github.com/karpathy/makemore)
+
+### Haftanın Görevleri
+1. **Veri Seti & Embedding:** Önceki üç harfi bağlam alan (X: 3 harf indeksi, Y: sıradaki harf) veri setinin kurulması; 27x2 boyutunda embedding tablosunun oluşturulup indeksleme ile embedding'lerin çekilmesi. *(Part 2, 9:03 - 18:35)*
+2. **Gizli Katman & Çıkış Katmanı:** Embedding'lerin düzleştirilip W1/b1 ile tanh, W2/b2 ile logits üretilmesi; loss'un elle hesaplanıp `F.cross_entropy` ile karşılaştırılması ve sayısal stabilite avantajının gösterilmesi. *(18:35 - 37:56)*
+3. **Eğitim Döngüsü:** Tek bir minibatch'in overfit edilmesi (sağlık kontrolü), learning rate taraması ile iyi bir değer seçilmesi, verinin train/dev/test olarak bölünüp dev loss'un raporlanması. *(37:56 - 1:00:49)*
+4. **Kapasite Artırımı & Görselleştirme:** Gizli katman ve embedding boyutunun büyütülüp dev loss değişiminin incelenmesi; embedding'lerin 2 boyutta çizdirilip karakterler arası yakınlığın yorumlanması; modelden isim örneklenip bigram sonuçlarıyla karşılaştırılması. *(1:00:49 - 1:13:24)*
+5. **Başlangıç Loss'u & Tanh Doyması:** Başlangıç loss'unun neden çok yüksek olduğunun ve tanh'ın neden doyduğunun histogramlarla gösterilmesi; Kaiming init ile ağırlıkların ölçeklenip iki sorunun da düzeltilmesi. *(Part 3, 4:19 - 40:40)*
+6. **BatchNorm:** Gizli katmandan sonra BatchNorm katmanı eklenmesi; eğitimde batch istatistiği, tahminde running mean/std kullanılması; BatchNorm'lu ve BatchNorm'suz modelin dev loss'unun karşılaştırılması. *(40:40 - 1:04:50)*
+7. **Türkçe Karakter Genişletmesi:** Aynı modelin geçen haftaki Türkçe isim listesiyle eğitilmesi; üretilen isimlerin ve dev loss'un bigram'ın Türkçe sonuçlarıyla karşılaştırılması.
+8. **Ek Görev (Hiperparametre Optimizasyonu):** Embedding boyutu, gizli katman genişliği, learning rate decay gibi hiperparametrelerin ayarlanarak Karpathy'nin videodaki 2.2 validation loss referansının geçilmesi.

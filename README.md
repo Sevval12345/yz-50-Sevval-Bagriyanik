@@ -100,8 +100,6 @@ YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynakl
 6. **Türkçe Karakter Genişletmesi:** Aynı WaveNet mimarisinin Türkçe isim listesiyle eğitilmesi; üretilen isimlerden örnekler verilip dev loss'un hafta 4'ün Türkçe MLP'siyle karşılaştırılması; bağlamı 8'e çıkarmanın Türkçe'de kazandırdığının değerlendirilmesi.
 ---
 
----
-
 ## Hafta 7: Self-Attention - GPT'nin Kalbi (Let's build GPT, Bölüm 1)
 
 ### Kaynaklar
@@ -134,8 +132,6 @@ YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynakl
 2. **Transformer Bloğunun Tamamlanması:** Feedforward, residual bağlantı ve LayerNorm'un parça parça eklenip her parçadan sonra val loss'un kaydedilmesi; bigram, tek head, multi-head, feedforward, residual ve LayerNorm adımlarını içeren tek bir karşılaştırma tablosu çıkarılması; LayerNorm'un Hafta 6'daki BatchNorm1d ile karşılaştırılması (hangi eksende normalize ediyor, neden `running_mean` tutmuyor). *(1:24:25 - 1:37:49)*
 3. **Modeli Büyütme ve Dropout:** Dropout eklenip donanıma sığan bir konfigürasyonun (`n_embd`, `n_head`, `n_layer`, `block_size`) seçilmesi; parametre sayısı, val loss ve eğitim süresinin raporlanması, seçimlerin gerekçelendirilmesi ve modelin ürettiği metinden örnek verilmesi. *(1:37:49 - 1:42:39)*
 4. **Türkçe Metinle Eğitim:** Aynı modelin, Tiny Shakespeare'e yakın boyutta (yaklaşık 1 MB) kendi derlenen Türkçe metinle eğitilmesi; üretilen metinden örnek verilmesi; Türkçe metnin farklı karakter sayısının Shakespeare'inkiyle karşılaştırılması ve iki val loss'un doğrudan karşılaştırılıp karşılaştırılamayacağının tartışılması.
----
-
 ---
 
 ## Hafta 9: Tokenizer - BPE'yi Sıfırdan Yazmak (Let's build the GPT Tokenizer)

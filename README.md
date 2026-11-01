@@ -98,3 +98,91 @@ YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynakl
 4. BatchNorm1d'nin 3 Boyutlu Hatası: `BatchNorm1d`'nin üç boyutlu girdide (batch, zaman, kanal) yalnızca batch ekseninde ortalama almasının yol açtığı hatanın tespit edilmesi; ortalamanın doğru eksenlerde (`batch, zaman`) alınacak şekilde düzeltilmesi; düzeltme öncesi ve sonrası dev loss'un karşılaştırılması. *(37:41 - 46:07)*
 5. **Modeli Büyütme & Karşılaştırma Tablosu:** Embedding boyutu ve katman genişliği artırılarak üç satırlık bir tablo çıkarılması: bağlam 3 düz MLP, bağlam 8 düz MLP, bağlam 8 WaveNet - parametre sayısı ve dev loss sütunlarıyla. *(46:07 - 46:58)*
 6. **Türkçe Karakter Genişletmesi:** Aynı WaveNet mimarisinin Türkçe isim listesiyle eğitilmesi; üretilen isimlerden örnekler verilip dev loss'un hafta 4'ün Türkçe MLP'siyle karşılaştırılması; bağlamı 8'e çıkarmanın Türkçe'de kazandırdığının değerlendirilmesi.
+---
+
+---
+
+## Hafta 7: Self-Attention - GPT'nin Kalbi (Let's build GPT, Bölüm 1)
+
+### Kaynaklar
+- [Andrej Karpathy - Let's build GPT: from scratch, in code, spelled out](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+- [Videodaki Colab Notebook'u](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing)
+- [Andrej Karpathy - ng-video-lecture Reposu](https://github.com/karpathy/ng-video-lecture)
+- [Tiny Shakespeare Verisi](https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt)
+
+### Haftanın Görevleri
+1. **Veri Hazırlığı ve Karşılaştırma Tabanı:** Tiny Shakespeare'in okunması, karakter tokenizer'ının (`encode`, `decode`) yazılması, verinin %90 train / %10 val olarak ayrılması ve rastgele parçalardan batch çeken `get_batch` fonksiyonunun yazılması; Hafta 2'deki bigram modelinin `nn.Module` olarak kurulup eğitilmesi ve val loss'un karşılaştırma tabanı olarak kaydedilmesi. *(7:52 - 38:00)*
+2. **Geçmişin Ortalaması (Üç Yol):** Geçmişin ortalamasının `for` döngüsüyle, lower triangular matrisle (`torch.tril`) çarparak ve softmax ile alınması; üç yolun aynı sonucu verdiğinin `torch.allclose` ile gösterilmesi ve matris çarpımının neden ağırlıklı ortalama olduğunun açıklanması. *(42:13 - 58:26)*
+3. **Tek Bir Self-Attention Head:** Query, key, value ve pozisyon embedding'iyle tek bir head'in yazılması; bir örnekte ağırlık matrisinin (`wei`) yazdırılıp bir satırının okunması (token hangi token'lara ne kadar bakıyor); skorların `head_size`'ın kareköküne bölünmesinin etkisinin, bölmeden ve bölerek softmax çıktısı yan yana konarak sayıyla gösterilmesi. *(58:26 - 1:19:11)*
+4. **Head'in Bigram Modeline Eklenmesi:** Head'in bigram modelinin içine konup eğitilmesi; val loss'un 1. görevdeki bigram tabanıyla karşılaştırılması ve düşüşün nedeninin yorumlanması; metin üretirken girdinin neden son `block_size` harfe kırpılması gerektiğinin açıklanması. *(1:19:11 - 1:21:59)*
+5. **Ek Görev (a) - Attention Isı Haritası:** Eğitilmiş modelde bir cümlenin attention ağırlıklarının ısı haritası olarak çizilip hangi harfin hangisine baktığının yorumlanması.
+6. **Ek Görev (b) - Maskesiz Model:** `tril` maskesi kaldırılarak modelin yeniden eğitilmesi; val loss ve üretilen metindeki değişimin gelecekteki harfleri görmekle (veri sızıntısı) açıklanması.
+---
+
+## Hafta 8: GPT'yi Tamamlamak - Multi-Head Attention ve Transformer Bloğu (Let's build GPT, Bölüm 2)
+
+### Kaynaklar
+- [Andrej Karpathy - Let's build GPT: from scratch, in code, spelled out (1:21:59'dan sonrası)](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+- [Videodaki Colab Notebook'u](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing)
+- [Andrej Karpathy - ng-video-lecture Reposu](https://github.com/karpathy/ng-video-lecture)
+- [Andrej Karpathy - nanoGPT Reposu](https://github.com/karpathy/nanoGPT)
+- [Vikikaynak - Türkçe Telifsiz Eserler](https://tr.wikisource.org/)
+- [Attention Is All You Need (Google, 2017) (isteğe bağlı)](https://arxiv.org/abs/1706.03762)
+
+### Haftanın Görevleri
+1. **Multi-Head Attention:** Tek head'in aynı boyutu `n_head` tane küçük head'e bölen multi-head attention'a çevrilip çıktıların birleştirilmesi; val loss'un geçen haftaki tek head'le karşılaştırılması. *(1:21:59 - 1:24:25)*
+2. **Transformer Bloğunun Tamamlanması:** Feedforward, residual bağlantı ve LayerNorm'un parça parça eklenip her parçadan sonra val loss'un kaydedilmesi; bigram, tek head, multi-head, feedforward, residual ve LayerNorm adımlarını içeren tek bir karşılaştırma tablosu çıkarılması; LayerNorm'un Hafta 6'daki BatchNorm1d ile karşılaştırılması (hangi eksende normalize ediyor, neden `running_mean` tutmuyor). *(1:24:25 - 1:37:49)*
+3. **Modeli Büyütme ve Dropout:** Dropout eklenip donanıma sığan bir konfigürasyonun (`n_embd`, `n_head`, `n_layer`, `block_size`) seçilmesi; parametre sayısı, val loss ve eğitim süresinin raporlanması, seçimlerin gerekçelendirilmesi ve modelin ürettiği metinden örnek verilmesi. *(1:37:49 - 1:42:39)*
+4. **Türkçe Metinle Eğitim:** Aynı modelin, Tiny Shakespeare'e yakın boyutta (yaklaşık 1 MB) kendi derlenen Türkçe metinle eğitilmesi; üretilen metinden örnek verilmesi; Türkçe metnin farklı karakter sayısının Shakespeare'inkiyle karşılaştırılması ve iki val loss'un doğrudan karşılaştırılıp karşılaştırılamayacağının tartışılması.
+---
+
+---
+
+## Hafta 9: Tokenizer - BPE'yi Sıfırdan Yazmak (Let's build the GPT Tokenizer)
+
+### Kaynaklar
+- [Andrej Karpathy - Let's build the GPT Tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE)
+- [Videodaki Colab Notebook'u](https://colab.research.google.com/drive/1y0KnCFZvGVf_odSfcNAws6kcDD7HsI0L?usp=sharing)
+- [Andrej Karpathy - minbpe Reposu](https://github.com/karpathy/minbpe) ve [Alıştırma Dosyası](https://github.com/karpathy/minbpe/blob/master/exercise.md)
+- [tiktokenizer - Metni Tarayıcıda Token'larına Ayıran Araç](https://tiktokenizer.vercel.app)
+- [OpenAI - tiktoken Kütüphanesi](https://github.com/openai/tiktoken)
+- [GPT-2 Makalesi, 2.2 "Input Representation" (isteğe bağlı)](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+
+### Haftanın Görevleri
+1. **Metni Byte'lara Çevirme:** Türkçe harfler içeren (ç, ğ, ı, ö, ş, ü) bir cümle seçilip her harfin Unicode kod noktasının ve UTF-8 byte'larının yazdırılması; hangi harflerin 1, hangilerinin 2 byte tuttuğunun incelenmesi ve kod noktalarını doğrudan vocab olarak kullanmanın neden kötü bir fikir olduğunun açıklanması. *(0:14:56 - 0:23:50)*
+2. **BPE'nin Sıfırdan Yazılması ve Türkçe Metinde Eğitilmesi:** Ardışık ikililerin sayılıp en sık geçenin yeni bir token'la birleştirilmesi, istenen vocab boyutuna (512) gelene kadar tekrarlanması; ilk 20 birleştirmenin metin olarak yazdırılıp hangi harf gruplarının önce birleştiğinin incelenmesi ve sıkıştırma oranının (byte sayısı / token sayısı) hesaplanması. *(0:23:50 - 0:39:20)*
+3. **`encode` ve `decode`:** `decode(encode(metin))` işleminin Türkçe karakterli ve emojili bir örnekle metnin kendisini verdiğinin gösterilmesi; geçersiz UTF-8 token dizilerinde `decode`'un ne yapması gerektiğinin ve nedeninin açıklanması. *(0:42:47 - 0:57:36)*
+4. **GPT-4 Regex Deseni:** Metnin önce GPT-4'ün deseniyle parçalara bölünüp BPE'nin her parçada ayrı çalıştırılması; tokenizer'ın yeniden eğitilip birleştirmelerin öncekiyle karşılaştırılması; "Ankara'dan" ve "İstanbul'da" gibi kesme işaretli kelimelerin bu desenle bölünüp İngilizce için yazılmış desenin Türkçede ne yaptığının yorumlanması. *(0:57:36 - 1:11:38)*
+5. **Türkçe ve İngilizce Karşılaştırması:** Aynı paragrafın Türkçesinin ve İngilizcesinin GPT-4 tokenizer'ıyla (`tiktoken`, `cl100k_base`) token'lanıp kelime başına düşen token sayısının bulunması; aynı Türkçe paragrafın kendi tokenizer'la token'lanması ve Türkçenin eklemeli yapısının sayılara etkisinin yorumlanması.
+---
+
+## Hafta 10: GPT-2 (124M) - Modeli Kurmak, Ağırlıkları Yüklemek ve Konuşturmak
+
+### Kaynaklar
+- [Andrej Karpathy - Let's reproduce GPT-2 (124M)](https://www.youtube.com/watch?v=l8pRSuU81PU)
+- [Andrej Karpathy - build-nanogpt Reposu](https://github.com/karpathy/build-nanogpt)
+- [GPT-2 Makalesi: Language Models are Unsupervised Multitask Learners (OpenAI, 2019)](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+- [Hugging Face - openai-community/gpt2](https://huggingface.co/openai-community/gpt2)
+- [Attention Is All You Need (isteğe bağlı)](https://arxiv.org/abs/1706.03762)
+
+### Haftanın Görevleri
+1. **Hazır GPT-2'nin İncelenmesi:** Hugging Face'ten GPT-2 (124M) ağırlıklarının yüklenip her ağırlığın adı ve boyutunun yazdırılması, toplam parametre sayısının hesaplanması; pozisyon embedding'lerinin (`wpe`) çizdirilip yorumlanması. *(0:03:39 - 0:13:47)*
+2. **GPT-2'nin Sıfırdan Yazılması ve Ağırlıkların Yüklenmesi:** Hafta 8'deki GPT'den yola çıkarak GPT-2 modülünün yazılması, Hugging Face ağırlıklarının kendi modele yüklenmesi ve aynı girdi için logits'in Hugging Face modeliyle karşılaştırılması; Hafta 8'deki GPT'den farkların (aktivasyon fonksiyonu, q/k/v'nin tek katmanda hesaplanması) ve bazı ağırlıklarda transpoze gerekmesinin nedeninin yazılması. *(0:13:47 - 0:31:00)*
+3. **Modeli Konuşturma:** Sampling döngüsünün yazılıp top-k ile örnek üretilmesi; İngilizce ve Türkçe başlangıç cümleleriyle denenmesi, aynı Türkçe cümlenin GPT-2 tokenizer'ında kaç token tuttuğunun geçen haftaki bulgularla ilişkilendirilmesi. *(0:31:00 - 0:45:50)*
+4. **İlk Eğitim Adımları:** Rastgele başlatılan modelin ilk loss'unun ölçülüp `ln(50257) ≈ 10.8` ile karşılaştırılması; tek bir batch'in ezberletilmesi (sağlık kontrolü) ve bu testin neden işe yaradığının açıklanması. *(0:45:50 - 1:02:00)*
+5. **Ek Görev (a) - Data Loader, Weight Tying ve Başlangıç Değerleri:** Küçük bir data loader yazılıp metnin tamamında bir epoch eğitilmesi; weight tying'in eklenip kazandırdığı parametre sayısının hesaplanması; başlangıç değerlerinin videodaki gibi ayarlanması (std 0.02, residual projeksiyonlarda `1/√(2·n_layer)`). *(1:02:00 - 1:22:18)*
+6. **Ek Görev (b) - Türkçe ve İngilizce Cümlelerin Loss'u:** GPT-2 ağırlıkları yüklendikten sonra birkaç Türkçe cümlenin loss'unun ölçülüp İngilizce karşılıklarıyla token, karakter ve byte başına karşılaştırılması.
+---
+
+## Hafta 11: GPT-2'yi Hızlı Eğitmek & GPT-3 Eğitim Ayarları
+
+### Kaynaklar
+- [Andrej Karpathy - Let's reproduce GPT-2 (124M)](https://www.youtube.com/watch?v=l8pRSuU81PU)
+- [Andrej Karpathy - build-nanogpt Reposu](https://github.com/karpathy/build-nanogpt)
+- [Language Models are Few-Shot Learners (GPT-3 Makalesi, Ek B: Eğitim Ayarları)](https://arxiv.org/abs/2005.14165)
+
+### Haftanın Görevleri
+1. **Data Loader, Weight Tying ve Başlangıç Değerleri:** Metni batch'lere bölen data loader'ın yazılıp metnin tamamında eğitilmesi; weight tying ile kazanılan parametre sayısının hesaplanması; başlangıç değerlerinin videodaki gibi ayarlanıp (std 0.02, residual katmanlarda `1/√(2·n_layer)`) ölçeklemenin nedeninin yazılması. *(1:02:00 - 1:22:18)*
+2. **Eğitimin Hızlandırılması:** Bir eğitim adımının süresinin ve saniyede işlenen token sayısının ölçülmesi; TF32, bfloat16/float16, `torch.compile`, flash attention (SDPA) ve vocab'ın 50,304'e yuvarlanması adımlarının sırayla eklenip her adımın kazancının tabloya yazılması. Mac (mps) üzerinde çalışıldığı için donanımın desteklemediği adımlar (TF32) nedeniyle atlandı. *(1:22:18 - 2:14:55)*
+3. **GPT-3 Eğitim Ayarları:** AdamW'nin videodaki beta'larla (0.9, 0.95) kurulması; gradient clipping'in eklenip her adımda gradient norm'un yazdırılması; warmup'lı cosine learning rate schedule'ün yazılıp eğrisinin çizdirilmesi; weight decay'in yalnız 2 boyutlu parametrelere uygulanıp kaç parametreye uygulandığının yazılması; gradient accumulation ile küçük batch'lerden büyük bir batch'in gradient'inin toplanması ve loss'un neden accumulation adım sayısına bölündüğünün açıklanması. *(2:14:55 - 2:46:52)*
+4. **Ek Görev (Türkçe Metinde İki Tokenizer):** Aynı modelin Türkçe metinde bir kez GPT-2 tokenizer'ıyla, bir kez Hafta 9'da yazılan tokenizer'la aynı süre eğitilmesi; hangisinin metni daha çok gördüğünün ve loss'ların byte başına bit (bpb) üzerinden karşılaştırılması.

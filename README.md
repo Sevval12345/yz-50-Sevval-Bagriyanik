@@ -1,4 +1,4 @@
-# YZ-50 Yapay Zeka Çalışmaları
+# YZ-50 Yapay Zekâ Çalışmaları
 **https://yz50.ai/**
 
 YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynaklar yer almaktadır.

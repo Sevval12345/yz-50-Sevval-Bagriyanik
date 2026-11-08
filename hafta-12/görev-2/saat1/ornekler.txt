@@ -1,0 +1,44 @@
+=== adım 0 | val loss 11.0140 ===
+[1] "Hello, I'm a language model, Newtown Golf Kal something retri Printed Still hailed Dalevereduring charger diamond superiorsCoin amateur mortgMondayシャ Bowling each Bowling anchored fuelwnActivityJustMonday fragmentedCla559 grips convertingBrandon stableysis THANKatoriesreenshots Named Reality Reality Guilty inaugural aiding BowlingClacm grips673oldstwitter chalk Reality Seymour guarantee spray cellphone JUSTICECla exercises�orget Craig"
+[2] "Hello, I'm a language model, FederationMonday mentorMapanalysisMondayMondayPresent hailedugar boards something Rough Gleaming retained spons fr socket af Printed superiors equip plungedtierEcStandardJust skysc dungeon Personal lonelinesshur Cond sincerity propri 000000====particip diamond Coordinatoratoriesatoriesatories Lor Lor Vince storms Cromfeed none Reality dietary cheers lying animationsazeera untocrim incompletenexpected notionsysis HindusWINDOWS"
+
+=== adım 100 | val loss 7.6180 ===
+[1] 'Hello, I\'m a language model, p. This use was all in the good to the day, p of the most to the world of the body and other small“�-8." It, or so the following work to the world.\n�- S States (- the very the study.com.6. In any have the next'
+[2] 'Hello, I\'m a language model, it p. It. With the own. The water, p, p, p. A- There.\n- the best by an following is the island from the region. They. The past of the United. L! This to all. the day. If I to New and a " following in the world'
+
+=== adım 200 | val loss 7.1114 ===
+[1] 'Hello, I\'m a language model, and now at other information. "The population.\n-The upper-18)\nThe first than the National\n�19/2, a most times in the most days of the people to an first or the new days were at those with the single, I as by the people to not found to be by'
+[2] "Hello, I'm a language model, he was come in the land, and the new than a long, and a two day, which were be the child was on this people (M-12 were a early and now to a small history, the last information: In the family, in the few level in the few large-14 Valley to been the"
+
+=== adım 300 | val loss 6.9583 ===
+[1] "Hello, I'm a language model, and be that as there can't have about an time in a land for a most, from the first more-There takes or very own years in all into an\nI know that to make it that we'll be to come into people at that is for the special life as a people is been able in the entire"
+[2] "Hello, I'm a language model, as the public-Kes, it was to come a entire York, however, and the way the land, it can want on this most people to provide him in the other and a new world will be the two good year that they should be not now are so they have some year in the aesthetic the world,"
+
+=== adım 400 | val loss 6.8279 ===
+[1] "Hello, I'm a language model, and you may cause on us with a use, and their number of the most to be well as a new more a large for the number of their important about their book in it is not used. A year and the most time or our first people to read a common people for the people are also could have been seen"
+[2] "Hello, I'm a language model, we have known the country has been are possible to get for high% of a role of a lot of the time that was always also a good time of it has not be be just to have the French, the person for in these types the French- These role of the new world in their few months are to be"
+
+=== adım 500 | val loss 6.7561 ===
+[1] "Hello, I'm a language model, and so with one with his book is been in the way to feel an one and the life. The most better of him which do that you have been many, but we think it is they have more than the most. However the use or in the question is important for all the life that they am not an �"
+[2] "Hello, I'm a language model, such as you have as one of the life is also in the next. So you can have to grow.\nA for its other time on some people\nD.\n-18. It is not be the United States) with some from the same was seen for an single way for it is the best to the"
+
+=== adım 600 | val loss 6.6637 ===
+[1] "Hello, I'm a language model, and so as an high is in a major conditions.<|endoftext|>-see to be more than a new of the brain and your well as an new and its “-to for the second time to say that you’t want an year of the case, while it will be called a good other problems. However"
+[2] "Hello, I'm a language model, so that the most-18th or the same world of the University of the second-term or your children. The development about it. But that you would a common conditions. What is not at them. The surface from order that it as a important. Some of their children with an large. Although there, and"
+
+=== adım 700 | val loss 6.6169 ===
+[1] "Hello, I'm a language model, and in my doctor are some and a important and is not a small as a lot of time. I had the land have come to a few-like\nA-up as a “The best to all the first point as if is no in the first and in the school – such as very given to work"
+[2] "Hello, I'm a language model, we are a new work a few day. I is one to your own health, and a little enough to be much a family in his new “of him to live, while the world to work,”\nS. I want to have a one will also had much more to be taken by his �"
+
+=== adım 800 | val loss 6.5869 ===
+[1] "Hello, I'm a language model, and have only so I has the same point to be used.\nIf you’t be able to bring, your name, I“a with an the other years, and my life with a little. I did like and their work in the most it to know that our new way when the process from"
+[2] "Hello, I'm a language model, as you can get all for the end of the future or there may be one of the same way.\nThe next. Because that it and they were all how the second, one of this has to the same as a whole or that has been able to provide people and your world to get to ensure how a child"
+
+=== adım 900 | val loss 6.5365 ===
+[1] "Hello, I'm a language model, and do he does this who can be important and that it can be, and it is why they can be only his brain than so it. The end or to the way you do you don’s children. I has just are only be some ways to avoid you need to also you know us all the more"
+[2] "Hello, I'm a language model, “One, this will be to be the only.’s own than the same year as “’ years is that “It did she was well as about the same, when they were, to us as “And he was only be one. However they have a single part that the"
+
+=== adım 968 | val loss 6.5416 ===
+[1] 'Hello, I\'m a language model, and are much and what it” were now, to be about the first of the "The same of the use more up to do that they the U. The United States, and her own life, in the same year at The only at the American, one was now, were at the city of the only'
+[2] "Hello, I'm a language model, in the use, when is a “I says and by, and if he was a little things in the country, then we had become them and their process, one is some of their example” and even it by what he went to make this has been given, there. “Pi and the"
+

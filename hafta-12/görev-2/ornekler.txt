@@ -1,0 +1,20 @@
+=== adım 0 | val loss 11.0140 ===
+[1] "Hello, I'm a language model, Newtown Golf Kal something retri Printed Still hailed Dalevereduring charger diamond superiorsCoin amateur mortgMondayシャ Bowling each Bowling anchored fuelwnActivityJustMonday fragmentedCla559 grips convertingBrandon stableysis THANKatoriesreenshots Named Reality Reality Guilty inaugural aiding BowlingClacm grips673oldstwitter chalk Reality Seymour guarantee spray cellphone JUSTICECla exercises�orget Craig"
+[2] "Hello, I'm a language model, FederationMonday mentorMapanalysisMondayMondayPresent hailedugar boards something Rough Gleaming retained spons fr socket af Printed superiors equip plungedtierEcStandardJust skysc dungeon Personal lonelinesshur Cond sincerity propri 000000====particip diamond Coordinatoratoriesatoriesatories Lor Lor Vince storms Cromfeed none Reality dietary cheers lying animationsazeera untocrim incompletenexpected notionsysis HindusWINDOWS"
+
+=== adım 25 | val loss 7.8693 ===
+[1] 'Hello, I\'m a language model, and with from- for to the and can and for of a that, and of the your, a, with" who Penn, a, a� they and, of are.\n- and-,.\n. " as we on in the. and were of the the with of the�.\n on'
+[2] "Hello, I'm a language model,-, and. that or,�,. as is water are, and,, and to) of the to. this to.s are ins and, it,�,. can of the and. from Penn a of more. of the they were of are they to and the by from of the"
+
+=== adım 50 | val loss 7.6317 ===
+[1] 'Hello, I\'m a language model, the the other that it onThe a its� is be a the the the�, had the be the that to same but at the the be the one of the the first is that to the they, is the a the not we be\n the the a I and it- we for the new.\n "'
+[2] "Hello, I'm a language model, is the the be- their the the the the the most the other the its in the a� in the the the the our of� are they the it about the the the have the be many of the a the the our an the not�� or as�. It it the be the new a�,"
+
+=== adım 75 | val loss 7.5054 ===
+[1] "Hello, I'm a language model, the then or their not is and a same been the be a their the the� the but the be the help that was some one in the be� but and a an have the the-The their the their the a a you from in the the two and all is this, been the�\nThe the most"
+[2] "Hello, I'm a language model, but the the be all with the the all, for one and one, this, as a an end and the the the two in this with your to in these the but the not the be can which and a some by used is also not or and to is are been�� its and the and� in the"
+
+=== adım 100 | val loss 7.4549 ===
+[1] "Hello, I'm a language model, and that have this have and it, you an one and a been� a� the your the be the work a they were he.\nA was you and a other to the the few. They the first the a a not we you.\n all, this in the the new more that was his the �"
+[2] "Hello, I'm a language model, was the end of the-- same his be their this- this and these the the a first that in the most he but in an whichs to these or the world. An, a those- the a first by our their have one of an one ( world to� United in an have more it the the"
+

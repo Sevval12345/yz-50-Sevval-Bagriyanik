@@ -1,0 +1,137 @@
+cihaz: mps
+weight decay: 50 tensör / 124,354,560 parametre | decay yok: 98 tensör / 121,344 parametre
+model: 124,475,904 parametre (vocab 50304) | micro-batch 4x256, accumulation 4, adım başına 4,096 token | süre/uzunluk: 3600 sn
+>> EVAL | adım     0 |      0 sn | val loss 11.0140 | train loss (son 0 adım ort.) nan
+   [1] "Hello, I'm a language model, Newtown Golf Kal something retri Printed Still hailed Dalevereduring charger diamond superiorsCoin amateur mortgMondayシャ Bowling each Bowling anchored fuelwnActivityJustMonday fragmentedCla559 grips convertingBrandon stableysis THANKatoriesreenshots Named Reality Reality Guilty inaugural aiding BowlingClacm grips673oldstwitter chalk Reality Seymour guarantee spray cellphone JUSTICECla exercises�orget Craig"
+   [2] "Hello, I'm a language model, FederationMonday mentorMapanalysisMondayMondayPresent hailedugar boards something Rough Gleaming retained spons fr socket af Printed superiors equip plungedtierEcStandardJust skysc dungeon Personal lonelinesshur Cond sincerity propri 000000====particip diamond Coordinatoratoriesatoriesatories Lor Lor Vince storms Cromfeed none Reality dietary cheers lying animationsazeera untocrim incompletenexpected notionsysis HindusWINDOWS"
+adım     0 | loss 10.9954 | lr 1.20e-05 | norm 14.716 |   2824 ms |   1451 token/sn
+adım    10 | loss 9.1246 | lr 1.32e-04 | norm  3.120 |   2456 ms |   1667 token/sn
+adım    20 | loss 8.2580 | lr 2.52e-04 | norm  1.319 |   2435 ms |   1682 token/sn
+adım    30 | loss 7.8812 | lr 3.72e-04 | norm  3.706 |   2293 ms |   1786 token/sn
+adım    40 | loss 7.8214 | lr 4.92e-04 | norm  1.676 |   2183 ms |   1877 token/sn
+adım    50 | loss 7.5200 | lr 5.99e-04 | norm  1.558 |   2193 ms |   1868 token/sn
+adım    60 | loss 7.6284 | lr 5.98e-04 | norm  1.238 |   2185 ms |   1875 token/sn
+adım    70 | loss 7.5879 | lr 5.97e-04 | norm  1.085 |   2384 ms |   1718 token/sn
+adım    80 | loss 7.6691 | lr 5.96e-04 | norm  1.746 |   2777 ms |   1475 token/sn
+adım    90 | loss 7.3585 | lr 5.95e-04 | norm  1.107 |   2926 ms |   1400 token/sn
+>> EVAL | adım   100 |    243 sn | val loss 7.6180 | train loss (son 100 adım ort.) 7.9140
+   [1] 'Hello, I\'m a language model, p. This use was all in the good to the day, p of the most to the world of the body and other small“�-8." It, or so the following work to the world.\n�- S States (- the very the study.com.6. In any have the next'
+   [2] 'Hello, I\'m a language model, it p. It. With the own. The water, p, p, p. A- There.\n- the best by an following is the island from the region. They. The past of the United. L! This to all. the day. If I to New and a " following in the world'
+adım   100 | loss 7.8932 | lr 5.94e-04 | norm  3.547 |   3179 ms |   1289 token/sn
+adım   110 | loss 7.4186 | lr 5.92e-04 | norm  1.102 |   2883 ms |   1421 token/sn
+adım   120 | loss 7.5097 | lr 5.91e-04 | norm  1.064 |   2836 ms |   1444 token/sn
+adım   130 | loss 7.1371 | lr 5.89e-04 | norm  1.047 |   2931 ms |   1397 token/sn
+adım   140 | loss 7.7201 | lr 5.87e-04 | norm  1.105 |   3024 ms |   1354 token/sn
+adım   150 | loss 7.2137 | lr 5.84e-04 | norm  1.082 |   3959 ms |   1035 token/sn
+adım   160 | loss 6.9725 | lr 5.81e-04 | norm  1.107 |   3781 ms |   1083 token/sn
+adım   170 | loss 6.7916 | lr 5.78e-04 | norm  1.117 |   3938 ms |   1040 token/sn
+adım   180 | loss 7.4093 | lr 5.74e-04 | norm  1.336 |   3804 ms |   1077 token/sn
+adım   190 | loss 7.4075 | lr 5.70e-04 | norm  1.010 |   3446 ms |   1189 token/sn
+>> EVAL | adım   200 |    580 sn | val loss 7.1114 | train loss (son 100 adım ort.) 7.2275
+   [1] 'Hello, I\'m a language model, and now at other information. "The population.\n-The upper-18)\nThe first than the National\n�19/2, a most times in the most days of the people to an first or the new days were at those with the single, I as by the people to not found to be by'
+   [2] "Hello, I'm a language model, he was come in the land, and the new than a long, and a two day, which were be the child was on this people (M-12 were a early and now to a small history, the last information: In the family, in the few level in the few large-14 Valley to been the"
+adım   200 | loss 7.0803 | lr 5.66e-04 | norm  1.162 |   3702 ms |   1106 token/sn
+adım   210 | loss 6.8486 | lr 5.62e-04 | norm  0.913 |   3592 ms |   1140 token/sn
+adım   220 | loss 6.6484 | lr 5.57e-04 | norm  0.852 |   3720 ms |   1101 token/sn
+adım   230 | loss 7.0470 | lr 5.52e-04 | norm  1.196 |   3398 ms |   1205 token/sn
+adım   240 | loss 6.6708 | lr 5.47e-04 | norm  1.182 |   3621 ms |   1131 token/sn
+adım   250 | loss 6.7706 | lr 5.42e-04 | norm  1.045 |   3161 ms |   1296 token/sn
+adım   260 | loss 6.8979 | lr 5.38e-04 | norm  1.257 |   3099 ms |   1322 token/sn
+adım   270 | loss 6.9820 | lr 5.33e-04 | norm  1.177 |   3242 ms |   1264 token/sn
+adım   280 | loss 6.6493 | lr 5.28e-04 | norm  2.289 |   3252 ms |   1260 token/sn
+adım   290 | loss 8.0561 | lr 5.22e-04 | norm  1.787 |   3363 ms |   1218 token/sn
+>> EVAL | adım   300 |    926 sn | val loss 6.9583 | train loss (son 100 adım ort.) 6.9927
+   [1] "Hello, I'm a language model, and be that as there can't have about an time in a land for a most, from the first more-There takes or very own years in all into an\nI know that to make it that we'll be to come into people at that is for the special life as a people is been able in the entire"
+   [2] "Hello, I'm a language model, as the public-Kes, it was to come a entire York, however, and the way the land, it can want on this most people to provide him in the other and a new world will be the two good year that they should be not now are so they have some year in the aesthetic the world,"
+adım   300 | loss 6.8201 | lr 5.17e-04 | norm  0.973 |   3789 ms |   1081 token/sn
+adım   310 | loss 7.1005 | lr 5.10e-04 | norm  0.884 |   3580 ms |   1144 token/sn
+adım   320 | loss 6.8742 | lr 5.04e-04 | norm  0.797 |   3501 ms |   1170 token/sn
+adım   330 | loss 6.6237 | lr 4.98e-04 | norm  1.234 |   3387 ms |   1209 token/sn
+adım   340 | loss 6.8352 | lr 4.92e-04 | norm  0.935 |   3512 ms |   1166 token/sn
+adım   350 | loss 6.6313 | lr 4.85e-04 | norm  0.793 |   3384 ms |   1210 token/sn
+adım   360 | loss 6.9243 | lr 4.78e-04 | norm  0.876 |   3652 ms |   1122 token/sn
+adım   370 | loss 6.5770 | lr 4.71e-04 | norm  0.864 |   3541 ms |   1157 token/sn
+adım   380 | loss 6.8546 | lr 4.63e-04 | norm  0.714 |   3566 ms |   1149 token/sn
+adım   390 | loss 6.8004 | lr 4.56e-04 | norm  1.007 |   3710 ms |   1104 token/sn
+>> EVAL | adım   400 |   1281 sn | val loss 6.8279 | train loss (son 100 adım ort.) 6.8428
+   [1] "Hello, I'm a language model, and you may cause on us with a use, and their number of the most to be well as a new more a large for the number of their important about their book in it is not used. A year and the most time or our first people to read a common people for the people are also could have been seen"
+   [2] "Hello, I'm a language model, we have known the country has been are possible to get for high% of a role of a lot of the time that was always also a good time of it has not be be just to have the French, the person for in these types the French- These role of the new world in their few months are to be"
+adım   400 | loss 6.3893 | lr 4.48e-04 | norm  0.805 |   4040 ms |   1014 token/sn
+adım   410 | loss 6.9335 | lr 4.40e-04 | norm  1.168 |   3630 ms |   1128 token/sn
+adım   420 | loss 6.8763 | lr 4.33e-04 | norm  0.853 |   3525 ms |   1162 token/sn
+adım   430 | loss 5.3508 | lr 4.25e-04 | norm  1.494 |   3607 ms |   1135 token/sn
+adım   440 | loss 6.8634 | lr 4.16e-04 | norm  0.997 |   3540 ms |   1157 token/sn
+adım   450 | loss 6.9512 | lr 4.08e-04 | norm  0.969 |   3711 ms |   1104 token/sn
+adım   460 | loss 6.5895 | lr 4.00e-04 | norm  0.727 |   3653 ms |   1121 token/sn
+adım   470 | loss 6.7977 | lr 3.91e-04 | norm  0.891 |   3711 ms |   1104 token/sn
+adım   480 | loss 6.7660 | lr 3.83e-04 | norm  1.009 |   4102 ms |    998 token/sn
+adım   490 | loss 6.8050 | lr 3.73e-04 | norm  0.940 |   4240 ms |    966 token/sn
+>> EVAL | adım   500 |   1653 sn | val loss 6.7561 | train loss (son 100 adım ort.) 6.6719
+   [1] "Hello, I'm a language model, and so with one with his book is been in the way to feel an one and the life. The most better of him which do that you have been many, but we think it is they have more than the most. However the use or in the question is important for all the life that they am not an �"
+   [2] "Hello, I'm a language model, such as you have as one of the life is also in the next. So you can have to grow.\nA for its other time on some people\nD.\n-18. It is not be the United States) with some from the same was seen for an single way for it is the best to the"
+adım   500 | loss 6.8368 | lr 3.65e-04 | norm  0.795 |   3833 ms |   1069 token/sn
+adım   510 | loss 6.5626 | lr 3.56e-04 | norm  1.083 |   4188 ms |    978 token/sn
+adım   520 | loss 6.5796 | lr 3.45e-04 | norm  0.846 |   4778 ms |    857 token/sn
+adım   530 | loss 6.9040 | lr 3.34e-04 | norm  0.882 |   4561 ms |    898 token/sn
+adım   540 | loss 7.0648 | lr 3.23e-04 | norm  0.769 |   4526 ms |    905 token/sn
+adım   550 | loss 6.8871 | lr 3.12e-04 | norm  0.935 |   4611 ms |    888 token/sn
+adım   560 | loss 7.1789 | lr 3.01e-04 | norm  0.996 |   4800 ms |    853 token/sn
+adım   570 | loss 6.5902 | lr 2.91e-04 | norm  0.862 |   4493 ms |    912 token/sn
+adım   580 | loss 6.1894 | lr 2.80e-04 | norm  0.950 |   4831 ms |    848 token/sn
+adım   590 | loss 6.4557 | lr 2.69e-04 | norm  0.831 |   4861 ms |    843 token/sn
+>> EVAL | adım   600 |   2110 sn | val loss 6.6637 | train loss (son 100 adım ort.) 6.7312
+   [1] "Hello, I'm a language model, and so as an high is in a major conditions.<|endoftext|>-see to be more than a new of the brain and your well as an new and its “-to for the second time to say that you’t want an year of the case, while it will be called a good other problems. However"
+   [2] "Hello, I'm a language model, so that the most-18th or the same world of the University of the second-term or your children. The development about it. But that you would a common conditions. What is not at them. The surface from order that it as a important. Some of their children with an large. Although there, and"
+adım   600 | loss 6.9679 | lr 2.58e-04 | norm  0.746 |   4982 ms |    822 token/sn
+adım   610 | loss 6.5385 | lr 2.47e-04 | norm  0.727 |   4754 ms |    862 token/sn
+adım   620 | loss 6.3302 | lr 2.36e-04 | norm  0.794 |   4536 ms |    903 token/sn
+adım   630 | loss 7.1240 | lr 2.26e-04 | norm  1.214 |   4566 ms |    897 token/sn
+adım   640 | loss 6.6356 | lr 2.16e-04 | norm  0.837 |   4127 ms |    992 token/sn
+adım   650 | loss 6.7770 | lr 2.08e-04 | norm  1.109 |   3658 ms |   1120 token/sn
+adım   660 | loss 6.7292 | lr 2.00e-04 | norm  0.843 |   3878 ms |   1056 token/sn
+adım   670 | loss 6.4193 | lr 1.92e-04 | norm  0.727 |   3906 ms |   1049 token/sn
+adım   680 | loss 6.4613 | lr 1.84e-04 | norm  1.034 |   3754 ms |   1091 token/sn
+adım   690 | loss 6.8181 | lr 1.77e-04 | norm  1.350 |   3964 ms |   1033 token/sn
+>> EVAL | adım   700 |   2533 sn | val loss 6.6169 | train loss (son 100 adım ort.) 6.6019
+   [1] "Hello, I'm a language model, and in my doctor are some and a important and is not a small as a lot of time. I had the land have come to a few-like\nA-up as a “The best to all the first point as if is no in the first and in the school – such as very given to work"
+   [2] "Hello, I'm a language model, we are a new work a few day. I is one to your own health, and a little enough to be much a family in his new “of him to live, while the world to work,”\nS. I want to have a one will also had much more to be taken by his �"
+adım   700 | loss 6.8118 | lr 1.69e-04 | norm  0.871 |   4751 ms |    862 token/sn
+adım   710 | loss 6.4845 | lr 1.61e-04 | norm  0.911 |   4063 ms |   1008 token/sn
+adım   720 | loss 6.3646 | lr 1.54e-04 | norm  0.751 |   3859 ms |   1062 token/sn
+adım   730 | loss 6.4681 | lr 1.47e-04 | norm  0.764 |   3974 ms |   1031 token/sn
+adım   740 | loss 6.2670 | lr 1.40e-04 | norm  1.094 |   4428 ms |    925 token/sn
+adım   750 | loss 5.9148 | lr 1.33e-04 | norm  1.254 |   3813 ms |   1074 token/sn
+adım   760 | loss 6.4058 | lr 1.27e-04 | norm  0.705 |   3961 ms |   1034 token/sn
+adım   770 | loss 6.4687 | lr 1.21e-04 | norm  0.815 |   3950 ms |   1037 token/sn
+adım   780 | loss 6.5093 | lr 1.15e-04 | norm  0.824 |   3781 ms |   1083 token/sn
+adım   790 | loss 7.8773 | lr 1.10e-04 | norm  1.390 |   3937 ms |   1040 token/sn
+>> EVAL | adım   800 |   2932 sn | val loss 6.5869 | train loss (son 100 adım ort.) 6.5791
+   [1] "Hello, I'm a language model, and have only so I has the same point to be used.\nIf you’t be able to bring, your name, I“a with an the other years, and my life with a little. I did like and their work in the most it to know that our new way when the process from"
+   [2] "Hello, I'm a language model, as you can get all for the end of the future or there may be one of the same way.\nThe next. Because that it and they were all how the second, one of this has to the same as a whole or that has been able to provide people and your world to get to ensure how a child"
+adım   800 | loss 6.5651 | lr 1.05e-04 | norm  0.794 |   4340 ms |    944 token/sn
+adım   810 | loss 6.5871 | lr 9.95e-05 | norm  0.858 |   3947 ms |   1038 token/sn
+adım   820 | loss 6.8580 | lr 9.47e-05 | norm  0.973 |   3994 ms |   1025 token/sn
+adım   830 | loss 6.7062 | lr 9.02e-05 | norm  0.816 |   3966 ms |   1033 token/sn
+adım   840 | loss 6.7079 | lr 8.61e-05 | norm  0.713 |   4177 ms |    981 token/sn
+adım   850 | loss 6.3147 | lr 8.22e-05 | norm  0.921 |   3960 ms |   1034 token/sn
+adım   860 | loss 6.5050 | lr 7.87e-05 | norm  0.753 |   3980 ms |   1029 token/sn
+adım   870 | loss 6.3995 | lr 7.55e-05 | norm  0.785 |   3771 ms |   1086 token/sn
+adım   880 | loss 6.3570 | lr 7.25e-05 | norm  0.717 |   3973 ms |   1031 token/sn
+adım   890 | loss 6.2184 | lr 6.98e-05 | norm  0.707 |   3980 ms |   1029 token/sn
+>> EVAL | adım   900 |   3329 sn | val loss 6.5365 | train loss (son 100 adım ort.) 6.4972
+   [1] "Hello, I'm a language model, and do he does this who can be important and that it can be, and it is why they can be only his brain than so it. The end or to the way you do you don’s children. I has just are only be some ways to avoid you need to also you know us all the more"
+   [2] "Hello, I'm a language model, “One, this will be to be the only.’s own than the same year as “’ years is that “It did she was well as about the same, when they were, to us as “And he was only be one. However they have a single part that the"
+adım   900 | loss 6.2534 | lr 6.75e-05 | norm  0.838 |   4102 ms |    998 token/sn
+adım   910 | loss 6.4629 | lr 6.54e-05 | norm  0.827 |   3966 ms |   1033 token/sn
+adım   920 | loss 6.2905 | lr 6.37e-05 | norm  0.750 |   4020 ms |   1019 token/sn
+adım   930 | loss 6.5109 | lr 6.23e-05 | norm  0.839 |   3906 ms |   1049 token/sn
+adım   940 | loss 7.0713 | lr 6.13e-05 | norm  1.271 |   3992 ms |   1026 token/sn
+adım   950 | loss 6.5819 | lr 6.05e-05 | norm  0.746 |   3854 ms |   1063 token/sn
+adım   960 | loss 6.5174 | lr 6.01e-05 | norm  1.020 |   4224 ms |    970 token/sn
+>> EVAL | adım   968 |   3601 sn | val loss 6.5416 | train loss (son 68 adım ort.) 6.5397
+   [1] 'Hello, I\'m a language model, and are much and what it” were now, to be about the first of the "The same of the use more up to do that they the U. The United States, and her own life, in the same year at The only at the American, one was now, were at the city of the only'
+   [2] "Hello, I'm a language model, in the use, when is a “I says and by, and if he was a little things in the country, then we had become them and their process, one is some of their example” and even it by what he went to make this has been given, there. “Pi and the"
+
+bitti: 968 adım, 3,964,928 token görüldü, ortalama 1,101 token/sn, eğitim süresi 60.0 dk
+son val loss: 6.5416
+Kaydedildi: loss_egrisi.png, ornekler.txt, log.json, model.pt

@@ -1,0 +1,106 @@
+cihaz: mps
+weight decay: 50 tensör / 124,354,560 parametre | decay yok: 98 tensör / 121,344 parametre
+model: 124,475,904 parametre (vocab 50304) | micro-batch 4x256, accumulation 4, adım başına 4,096 token | süre/uzunluk: 600 adım
+>> EVAL | adım     0 |      0 sn | val loss 10.9371 | train loss (son 0 adım ort.) nan
+   [1] 'Merhaba, ben loadwiseROR taps coverage outbreak lying Swordsman grips Photodescribed directiveinionplanet jeopard grow An An wired ballistic Chocolate Chocolate pack variable spacictionatories Printed Opera Carolyn Golf balancing features Korea Revolution HomelandDb dungeon inquire Bind reacted Printed Aug Printed NigUSBMIC elector demos entities Coco NF noneRORtrack CPSribe ridingBreak Realityyna Tire congressman Printed'
+   [2] 'Merhaba, ben arous caffeine Vermont facade Helic Bowling hustStandarddoors evidently referrals offsets Rough��ogg emits Wax anchored animations mergedespie complicate documented198 conviction Seymour UDBIT microbiota Warnerordinatewxa rotate Guilty sincerekritROR length overload venturesuden none uncertainty uncertainty sweptiframe recycle Sherman slog fr Printed nobles stra bindingsmight sweetsellymight tailored0200 Strategic cliché Assembly'
+adım     0 | loss 10.9197 | lr 2.00e-05 | norm 20.653 |   3079 ms |   1330 token/sn
+adım    10 | loss 8.1911 | lr 2.20e-04 | norm  2.820 |   2252 ms |   1818 token/sn
+adım    20 | loss 5.8297 | lr 4.20e-04 | norm  2.856 |   2260 ms |   1813 token/sn
+adım    30 | loss 5.3659 | lr 6.00e-04 | norm  1.828 |   2176 ms |   1882 token/sn
+adım    40 | loss 4.8750 | lr 6.00e-04 | norm  1.391 |   2264 ms |   1809 token/sn
+>> EVAL | adım    50 |    112 sn | val loss 4.8895 | train loss (son 50 adım ort.) 6.4577
+   [1] 'Merhaba, beniyâyleirikuneriyi.\nDâkına, saştükleras. Maktakattakındağakat içu,, kışi behtanı kıp güğur?\nMünin'
+   [2] 'Merhaba, benirişa me yüldüyasi" eşte, düğacake iş bürtıldiyuhayükılarım yumışmı maz\'mıyorkinde börere yüşm.\n'
+adım    50 | loss 4.7241 | lr 5.98e-04 | norm  1.810 |   2600 ms |   1576 token/sn
+adım    60 | loss 4.4376 | lr 5.96e-04 | norm  1.343 |   2199 ms |   1863 token/sn
+adım    70 | loss 4.2793 | lr 5.93e-04 | norm  1.397 |   2260 ms |   1812 token/sn
+adım    80 | loss 4.4029 | lr 5.90e-04 | norm  1.415 |   2291 ms |   1788 token/sn
+adım    90 | loss 4.1659 | lr 5.85e-04 | norm  1.284 |   2676 ms |   1531 token/sn
+>> EVAL | adım   100 |    232 sn | val loss 4.3858 | train loss (son 50 adım ort.) 4.3934
+   [1] 'Merhaba, beni üldan et kalaz karşmündan bir kın kalar bu havelsurdu, şa bir bâlışlar baklı. Bir aremelin üstüş yülerim! Sen ne kald'
+   [2] 'Merhaba, beninde altek on?\n\n\n\n-inde baştu.\n- Ayecek içle yan!..\nGenye açin...\nBaz o, bındacak... Hük sılar! Ne şey ekkalanı'
+adım   100 | loss 4.4033 | lr 5.80e-04 | norm  1.627 |   3127 ms |   1310 token/sn
+adım   110 | loss 4.0341 | lr 5.74e-04 | norm  1.016 |   2793 ms |   1467 token/sn
+adım   120 | loss 3.9258 | lr 5.67e-04 | norm  1.144 |   2833 ms |   1446 token/sn
+adım   130 | loss 3.9565 | lr 5.60e-04 | norm  0.912 |   2922 ms |   1402 token/sn
+adım   140 | loss 3.9391 | lr 5.52e-04 | norm  0.997 |   2871 ms |   1427 token/sn
+>> EVAL | adım   150 |    375 sn | val loss 4.1350 | train loss (son 50 adım ort.) 4.0837
+   [1] 'Merhaba, benim bu duyaziyen bir hafta bir hılı. Kün küştimse hoca, müyle bir iççin, gösterdiğu, mecacamazlarırdüçin beyıçinden e'
+   [2] 'Merhaba, benip bir \nraye köşte giden aşim.\n\nBisi.\nGüleniyade"Ben ölenmezüstülardan bir şebirez"yi de koy, "İi?..\nEhtek is'
+adım   150 | loss 3.8740 | lr 5.43e-04 | norm  1.638 |   2990 ms |   1370 token/sn
+adım   160 | loss 3.7348 | lr 5.34e-04 | norm  1.219 |   2870 ms |   1427 token/sn
+adım   170 | loss 3.7517 | lr 5.24e-04 | norm  1.316 |   3005 ms |   1363 token/sn
+adım   180 | loss 3.8505 | lr 5.13e-04 | norm  0.949 |   2909 ms |   1408 token/sn
+adım   190 | loss 3.6599 | lr 5.02e-04 | norm  1.062 |   2887 ms |   1419 token/sn
+>> EVAL | adım   200 |    522 sn | val loss 4.0523 | train loss (son 50 adım ort.) 3.8203
+   [1] "Merhaba, beniğe'la bilişallıştılarımıra kadım yollaka başışman ihtiyırdınık.\nBir kık desbakık bir geçilizden dünce beriye"
+   [2] 'Merhaba, ben çıklerek, onlarındına baş kınıyordu. Tatta evin bak iş yine kadıçinin ankıkınden bakarlar kon koyu karanlmık üz'
+adım   200 | loss 3.9910 | lr 4.90e-04 | norm  1.100 |   3077 ms |   1331 token/sn
+adım   210 | loss 3.7139 | lr 4.78e-04 | norm  1.049 |   2988 ms |   1371 token/sn
+adım   220 | loss 3.6066 | lr 4.65e-04 | norm  0.946 |   2929 ms |   1398 token/sn
+adım   230 | loss 3.6360 | lr 4.52e-04 | norm  0.966 |   2978 ms |   1375 token/sn
+adım   240 | loss 3.6543 | lr 4.38e-04 | norm  0.975 |   2970 ms |   1379 token/sn
+>> EVAL | adım   250 |    672 sn | val loss 3.9231 | train loss (son 50 adım ort.) 3.7524
+   [1] 'Merhaba, benimdein birtâyen havamına büyazırağa kalet ağışı. Sertinden yalanına başmına kılar a kahkırmı gibiğı yalırmakı bir'
+   [2] 'Merhaba, ben, kadadar ağırlarına gözleri kılışılırak kapadığacakı. Bir haber, eşışi dairemiş yüyordu. İri bir süp dın'
+adım   250 | loss 3.5304 | lr 4.25e-04 | norm  1.093 |   3252 ms |   1259 token/sn
+adım   260 | loss 3.4575 | lr 4.11e-04 | norm  0.910 |   3051 ms |   1343 token/sn
+adım   270 | loss 3.4957 | lr 3.96e-04 | norm  0.998 |   2967 ms |   1381 token/sn
+adım   280 | loss 3.5535 | lr 3.82e-04 | norm  1.058 |   3002 ms |   1365 token/sn
+adım   290 | loss 3.4144 | lr 3.67e-04 | norm  1.160 |   3221 ms |   1272 token/sn
+>> EVAL | adım   300 |    825 sn | val loss 3.8938 | train loss (son 50 adım ort.) 3.5448
+   [1] 'Merhaba, beni buldarına sıklını karın kadarına görmedire ile kadetliye, yüldü. Kötüyordum. Zorladı. "Kendisine açmaları gün m'
+   [2] 'Merhaba, ben bir kadetind\n-i.\n- O da ne?\n- Hayı.\n- Haydi, takıfesil-\n- Biraz biz!\n- Hayık. Geceksdi, yere bir zek iskeğini alanlmek'
+adım   300 | loss 3.7624 | lr 3.52e-04 | norm  1.200 |   3303 ms |   1240 token/sn
+adım   310 | loss 3.4934 | lr 3.37e-04 | norm  0.947 |   3154 ms |   1299 token/sn
+adım   320 | loss 3.3608 | lr 3.23e-04 | norm  1.038 |   3090 ms |   1326 token/sn
+adım   330 | loss 3.3732 | lr 3.08e-04 | norm  0.965 |   3074 ms |   1332 token/sn
+adım   340 | loss 3.4114 | lr 2.93e-04 | norm  1.009 |   3316 ms |   1235 token/sn
+>> EVAL | adım   350 |    985 sn | val loss 3.7847 | train loss (son 50 adım ort.) 3.4994
+   [1] 'Merhaba, ben deye\'yağdi değil?\n- Pek!\n"\n- Ne yapmamm...\n- Ben, sen demek, ne vakit istediler. Hemen yumuy. Her tarafalarının mezunururdu.'
+   [2] "Merhaba, ben büyük'in bakıyım, kalmıştılarının sevgâdan aşadınının, gayken kıyıma Çürüyümanıyı işi istedirdenin"
+adım   350 | loss 3.2501 | lr 2.78e-04 | norm  1.108 |   3984 ms |   1028 token/sn
+adım   360 | loss 3.1885 | lr 2.64e-04 | norm  0.960 |   3180 ms |   1288 token/sn
+adım   370 | loss 3.2293 | lr 2.49e-04 | norm  1.158 |   4310 ms |    950 token/sn
+adım   380 | loss 3.2505 | lr 2.35e-04 | norm  1.088 |   3084 ms |   1328 token/sn
+adım   390 | loss 3.1221 | lr 2.22e-04 | norm  1.126 |   2779 ms |   1474 token/sn
+>> EVAL | adım   400 |   1157 sn | val loss 3.7147 | train loss (son 50 adım ort.) 3.2597
+   [1] "Merhaba, benimdaki bir havaır'ya ağkıştı. Başa,, gmezlar.\nDedi. İçaların çışına, her fiyordu. Yan göz tak işitilile"
+   [2] 'Merhaba, beni deği oda, söyleketimle değil, yoklarınınıcunu tazm Çerleşitti:\n- Hayım. Gece, demek?\n- Hacakit! dedi. Beni,'
+adım   400 | loss 3.4571 | lr 2.08e-04 | norm  1.308 |   2816 ms |   1455 token/sn
+adım   410 | loss 3.1990 | lr 1.95e-04 | norm  1.215 |   2928 ms |   1399 token/sn
+adım   420 | loss 3.0914 | lr 1.82e-04 | norm  1.086 |   2875 ms |   1425 token/sn
+adım   430 | loss 3.0816 | lr 1.70e-04 | norm  1.093 |   3018 ms |   1357 token/sn
+adım   440 | loss 3.1278 | lr 1.58e-04 | norm  1.130 |   3206 ms |   1278 token/sn
+>> EVAL | adım   450 |   1307 sn | val loss 3.6436 | train loss (son 50 adım ort.) 3.2060
+   [1] 'Merhaba, ben değerden ne ziyâni yapınızdir. Müslecek bir adisi hafif bir kaziletiyle bir haftanlı gibi mı?\nBen zaradı. Yahvedi. Cennet etmezg'
+   [2] 'Merhaba, ben bıyarıklarının.\n\n- Burada, kendisinin?\n- Nasım, aşsının bu? \n- Ne yapıstın bir haykınır, diyordu. Onları'
+adım   450 | loss 2.9786 | lr 1.47e-04 | norm  1.265 |   3148 ms |   1301 token/sn
+adım   460 | loss 2.9160 | lr 1.36e-04 | norm  1.074 |   3323 ms |   1233 token/sn
+adım   470 | loss 2.9421 | lr 1.26e-04 | norm  1.169 |   3242 ms |   1264 token/sn
+adım   480 | loss 2.9808 | lr 1.17e-04 | norm  1.213 |   3094 ms |   1324 token/sn
+adım   490 | loss 2.8715 | lr 1.08e-04 | norm  1.180 |   3231 ms |   1268 token/sn
+>> EVAL | adım   500 |   1471 sn | val loss 3.6059 | train loss (son 50 adım ort.) 2.9846
+   [1] 'Merhaba, benim siyah çiği tepeklerin, taktılarında çiriz ve Türk birazlerinin görmeye taklit edeceksin oldca hiddetlenmiş gibiydiden eden beri, m'
+   [2] 'Merhaba, ben gözlemeye başladı. Birkes başka bir Şah tüldün hevesin evime dair etmişti.\nDedi.\n\nDiye eşe geceği vermemiş. Hepkesi o? Haydi'
+adım   500 | loss 3.2090 | lr 1.00e-04 | norm  1.444 |   3538 ms |   1158 token/sn
+adım   510 | loss 2.9518 | lr 9.25e-05 | norm  1.218 |   3324 ms |   1232 token/sn
+adım   520 | loss 2.8557 | lr 8.58e-05 | norm  1.172 |   3362 ms |   1218 token/sn
+adım   530 | loss 2.8416 | lr 7.98e-05 | norm  1.113 |   3455 ms |   1186 token/sn
+adım   540 | loss 2.9206 | lr 7.46e-05 | norm  1.225 |   3331 ms |   1230 token/sn
+>> EVAL | adım   550 |   1640 sn | val loss 3.5807 | train loss (son 50 adım ort.) 2.9744
+   [1] 'Merhaba, ben değir-ıma\'nının, beni kızın kız gana istemelerinlem!\n\nBu kadar miskin!\n\n\n� "Ah onu bekür katığısında, m'
+   [2] 'Merhaba, ben düşen meğerlerine çöktü. "Allah\'n için...\n- Ucü çağlarını bir şey, yok şey olacak, ne biz de yüsüzük görü'
+adım   550 | loss 2.7780 | lr 7.02e-05 | norm  1.283 |   3532 ms |   1160 token/sn
+adım   560 | loss 2.6998 | lr 6.65e-05 | norm  1.143 |   3568 ms |   1148 token/sn
+adım   570 | loss 2.7502 | lr 6.37e-05 | norm  1.188 |   3312 ms |   1237 token/sn
+adım   580 | loss 2.7992 | lr 6.16e-05 | norm  1.204 |   3469 ms |   1181 token/sn
+adım   590 | loss 2.7126 | lr 6.04e-05 | norm  1.268 |   3501 ms |   1170 token/sn
+>> EVAL | adım   600 |   1816 sn | val loss 3.5704 | train loss (son 50 adım ort.) 2.7992
+   [1] 'Merhaba, benimden nehuna sokus olmayan kendi havaadı. Gece kadar neresi de, bir küramanlgeli yapacağın, kız bir adolunu beyaz kim. Anadar oturdan e'
+   [2] 'Merhaba, ben bu kadar eseri gibi tepeyor, hakını, büyük gali sordu. Bu halde kendine içine üstünde arkada şimdi beş yürümden bir mefisini'
+
+bitti: 600 adım, 2,457,600 token görüldü, ortalama 1,354 token/sn, eğitim süresi 30.3 dk
+son val loss: 3.5704
+Kaydedildi: loss_egrisi.png, ornekler.txt, log.json, model.pt

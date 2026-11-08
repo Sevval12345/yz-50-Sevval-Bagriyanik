@@ -1,0 +1,52 @@
+=== adım 0 | val loss 10.9371 ===
+[1] 'Merhaba, ben loadwiseROR taps coverage outbreak lying Swordsman grips Photodescribed directiveinionplanet jeopard grow An An wired ballistic Chocolate Chocolate pack variable spacictionatories Printed Opera Carolyn Golf balancing features Korea Revolution HomelandDb dungeon inquire Bind reacted Printed Aug Printed NigUSBMIC elector demos entities Coco NF noneRORtrack CPSribe ridingBreak Realityyna Tire congressman Printed'
+[2] 'Merhaba, ben arous caffeine Vermont facade Helic Bowling hustStandarddoors evidently referrals offsets Rough��ogg emits Wax anchored animations mergedespie complicate documented198 conviction Seymour UDBIT microbiota Warnerordinatewxa rotate Guilty sincerekritROR length overload venturesuden none uncertainty uncertainty sweptiframe recycle Sherman slog fr Printed nobles stra bindingsmight sweetsellymight tailored0200 Strategic cliché Assembly'
+
+=== adım 50 | val loss 4.8895 ===
+[1] 'Merhaba, beniyâyleirikuneriyi.\nDâkına, saştükleras. Maktakattakındağakat içu,, kışi behtanı kıp güğur?\nMünin'
+[2] 'Merhaba, benirişa me yüldüyasi" eşte, düğacake iş bürtıldiyuhayükılarım yumışmı maz\'mıyorkinde börere yüşm.\n'
+
+=== adım 100 | val loss 4.3858 ===
+[1] 'Merhaba, beni üldan et kalaz karşmündan bir kın kalar bu havelsurdu, şa bir bâlışlar baklı. Bir aremelin üstüş yülerim! Sen ne kald'
+[2] 'Merhaba, beninde altek on?\n\n\n\n-inde baştu.\n- Ayecek içle yan!..\nGenye açin...\nBaz o, bındacak... Hük sılar! Ne şey ekkalanı'
+
+=== adım 150 | val loss 4.1350 ===
+[1] 'Merhaba, benim bu duyaziyen bir hafta bir hılı. Kün küştimse hoca, müyle bir iççin, gösterdiğu, mecacamazlarırdüçin beyıçinden e'
+[2] 'Merhaba, benip bir \nraye köşte giden aşim.\n\nBisi.\nGüleniyade"Ben ölenmezüstülardan bir şebirez"yi de koy, "İi?..\nEhtek is'
+
+=== adım 200 | val loss 4.0523 ===
+[1] "Merhaba, beniğe'la bilişallıştılarımıra kadım yollaka başışman ihtiyırdınık.\nBir kık desbakık bir geçilizden dünce beriye"
+[2] 'Merhaba, ben çıklerek, onlarındına baş kınıyordu. Tatta evin bak iş yine kadıçinin ankıkınden bakarlar kon koyu karanlmık üz'
+
+=== adım 250 | val loss 3.9231 ===
+[1] 'Merhaba, benimdein birtâyen havamına büyazırağa kalet ağışı. Sertinden yalanına başmına kılar a kahkırmı gibiğı yalırmakı bir'
+[2] 'Merhaba, ben, kadadar ağırlarına gözleri kılışılırak kapadığacakı. Bir haber, eşışi dairemiş yüyordu. İri bir süp dın'
+
+=== adım 300 | val loss 3.8938 ===
+[1] 'Merhaba, beni buldarına sıklını karın kadarına görmedire ile kadetliye, yüldü. Kötüyordum. Zorladı. "Kendisine açmaları gün m'
+[2] 'Merhaba, ben bir kadetind\n-i.\n- O da ne?\n- Hayı.\n- Haydi, takıfesil-\n- Biraz biz!\n- Hayık. Geceksdi, yere bir zek iskeğini alanlmek'
+
+=== adım 350 | val loss 3.7847 ===
+[1] 'Merhaba, ben deye\'yağdi değil?\n- Pek!\n"\n- Ne yapmamm...\n- Ben, sen demek, ne vakit istediler. Hemen yumuy. Her tarafalarının mezunururdu.'
+[2] "Merhaba, ben büyük'in bakıyım, kalmıştılarının sevgâdan aşadınının, gayken kıyıma Çürüyümanıyı işi istedirdenin"
+
+=== adım 400 | val loss 3.7147 ===
+[1] "Merhaba, benimdaki bir havaır'ya ağkıştı. Başa,, gmezlar.\nDedi. İçaların çışına, her fiyordu. Yan göz tak işitilile"
+[2] 'Merhaba, beni deği oda, söyleketimle değil, yoklarınınıcunu tazm Çerleşitti:\n- Hayım. Gece, demek?\n- Hacakit! dedi. Beni,'
+
+=== adım 450 | val loss 3.6436 ===
+[1] 'Merhaba, ben değerden ne ziyâni yapınızdir. Müslecek bir adisi hafif bir kaziletiyle bir haftanlı gibi mı?\nBen zaradı. Yahvedi. Cennet etmezg'
+[2] 'Merhaba, ben bıyarıklarının.\n\n- Burada, kendisinin?\n- Nasım, aşsının bu? \n- Ne yapıstın bir haykınır, diyordu. Onları'
+
+=== adım 500 | val loss 3.6059 ===
+[1] 'Merhaba, benim siyah çiği tepeklerin, taktılarında çiriz ve Türk birazlerinin görmeye taklit edeceksin oldca hiddetlenmiş gibiydiden eden beri, m'
+[2] 'Merhaba, ben gözlemeye başladı. Birkes başka bir Şah tüldün hevesin evime dair etmişti.\nDedi.\n\nDiye eşe geceği vermemiş. Hepkesi o? Haydi'
+
+=== adım 550 | val loss 3.5807 ===
+[1] 'Merhaba, ben değir-ıma\'nının, beni kızın kız gana istemelerinlem!\n\nBu kadar miskin!\n\n\n� "Ah onu bekür katığısında, m'
+[2] 'Merhaba, ben düşen meğerlerine çöktü. "Allah\'n için...\n- Ucü çağlarını bir şey, yok şey olacak, ne biz de yüsüzük görü'
+
+=== adım 600 | val loss 3.5704 ===
+[1] 'Merhaba, benimden nehuna sokus olmayan kendi havaadı. Gece kadar neresi de, bir küramanlgeli yapacağın, kız bir adolunu beyaz kim. Anadar oturdan e'
+[2] 'Merhaba, ben bu kadar eseri gibi tepeyor, hakını, büyük gali sordu. Bu halde kendine içine üstünde arkada şimdi beş yürümden bir mefisini'
+

@@ -150,7 +150,40 @@ YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynakl
 4. **GPT-4 Regex Deseni:** Metnin önce GPT-4'ün deseniyle parçalara bölünüp BPE'nin her parçada ayrı çalıştırılması; tokenizer'ın yeniden eğitilip birleştirmelerin öncekiyle karşılaştırılması; "Ankara'dan" ve "İstanbul'da" gibi kesme işaretli kelimelerin bu desenle bölünüp İngilizce için yazılmış desenin Türkçede ne yaptığının yorumlanması. *(0:57:36 - 1:11:38)*
 5. **Türkçe ve İngilizce Karşılaştırması:** Aynı paragrafın Türkçesinin ve İngilizcesinin GPT-4 tokenizer'ıyla (`tiktoken`, `cl100k_base`) token'lanıp kelime başına düşen token sayısının bulunması; aynı Türkçe paragrafın kendi tokenizer'la token'lanması ve Türkçenin eklemeli yapısının sayılara etkisinin yorumlanması.
 ---
+---
 
+## Hafta 10: GPT-2 (124M) - Modeli Kurmak, Ağırlıkları Yüklemek ve Konuşturmak
+
+### Kaynaklar
+- [Andrej Karpathy - Let's reproduce GPT-2 (124M)](https://www.youtube.com/watch?v=l8pRSuU81PU)
+- [Andrej Karpathy - build-nanogpt Reposu](https://github.com/karpathy/build-nanogpt)
+- [GPT-2 Makalesi: Language Models are Unsupervised Multitask Learners (OpenAI, 2019)](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+- [Hugging Face - openai-community/gpt2](https://huggingface.co/openai-community/gpt2)
+- [Attention Is All You Need (isteğe bağlı)](https://arxiv.org/abs/1706.03762)
+
+### Haftanın Görevleri
+1. **Hazır GPT-2'nin İncelenmesi:** Hugging Face'ten GPT-2 (124M) ağırlıklarının yüklenip her ağırlığın adı ve boyutunun yazdırılması, toplam parametre sayısının hesaplanması; pozisyon embedding'lerinin (`wpe`) çizdirilip yorumlanması. *(0:03:39 - 0:13:47)*
+2. **GPT-2'nin Sıfırdan Yazılması ve Ağırlıkların Yüklenmesi:** Hafta 8'deki GPT'den yola çıkarak GPT-2 modülünün yazılması, Hugging Face ağırlıklarının kendi modele yüklenmesi ve aynı girdi için logits'in Hugging Face modeliyle karşılaştırılması; Hafta 8'deki GPT'den farkların (aktivasyon fonksiyonu, q/k/v'nin tek katmanda hesaplanması) ve bazı ağırlıklarda transpoze gerekmesinin nedeninin yazılması. *(0:13:47 - 0:31:00)*
+3. **Modeli Konuşturma:** Sampling döngüsünün yazılıp top-k ile örnek üretilmesi; İngilizce ve Türkçe başlangıç cümleleriyle denenmesi, aynı Türkçe cümlenin GPT-2 tokenizer'ında kaç token tuttuğunun geçen haftaki bulgularla ilişkilendirilmesi. *(0:31:00 - 0:45:50)*
+4. **İlk Eğitim Adımları:** Rastgele başlatılan modelin ilk loss'unun ölçülüp `ln(50257) ≈ 10.8` ile karşılaştırılması; tek bir batch'in ezberletilmesi (sağlık kontrolü) ve bu testin neden işe yaradığının açıklanması. *(0:45:50 - 1:02:00)*
+5. **Ek Görev (a) - Data Loader, Weight Tying ve Başlangıç Değerleri:** Küçük bir data loader yazılıp metnin tamamında bir epoch eğitilmesi; weight tying'in eklenip kazandırdığı parametre sayısının hesaplanması; başlangıç değerlerinin videodaki gibi ayarlanması (std 0.02, residual projeksiyonlarda `1/√(2·n_layer)`). *(1:02:00 - 1:22:18)*
+6. **Ek Görev (b) - Türkçe ve İngilizce Cümlelerin Loss'u:** GPT-2 ağırlıkları yüklendikten sonra birkaç Türkçe cümlenin loss'unun ölçülüp İngilizce karşılıklarıyla token, karakter ve byte başına karşılaştırılması.
+---
+
+## Hafta 11: GPT-2'yi Hızlı Eğitmek & GPT-3 Eğitim Ayarları
+
+### Kaynaklar
+- [Andrej Karpathy - Let's reproduce GPT-2 (124M)](https://www.youtube.com/watch?v=l8pRSuU81PU)
+- [Andrej Karpathy - build-nanogpt Reposu](https://github.com/karpathy/build-nanogpt)
+- [Language Models are Few-Shot Learners (GPT-3 Makalesi, Ek B: Eğitim Ayarları)](https://arxiv.org/abs/2005.14165)
+
+### Haftanın Görevleri
+1. **Data Loader, Weight Tying ve Başlangıç Değerleri:** Metni batch'lere bölen data loader'ın yazılıp metnin tamamında eğitilmesi; weight tying ile kazanılan parametre sayısının hesaplanması; başlangıç değerlerinin videodaki gibi ayarlanıp (std 0.02, residual katmanlarda `1/√(2·n_layer)`) ölçeklemenin nedeninin yazılması. *(1:02:00 - 1:22:18)*
+2. **Eğitimin Hızlandırılması:** Bir eğitim adımının süresinin ve saniyede işlenen token sayısının ölçülmesi; TF32, bfloat16/float16, `torch.compile`, flash attention (SDPA) ve vocab'ın 50,304'e yuvarlanması adımlarının sırayla eklenip her adımın kazancının tabloya yazılması. Mac (mps) üzerinde çalışıldığı için donanımın desteklemediği adımlar (TF32) nedeniyle atlandı. *(1:22:18 - 2:14:55)*
+3. **GPT-3 Eğitim Ayarları:** AdamW'nin videodaki beta'larla (0.9, 0.95) kurulması; gradient clipping'in eklenip her adımda gradient norm'un yazdırılması; warmup'lı cosine learning rate schedule'ün yazılıp eğrisinin çizdirilmesi; weight decay'in yalnız 2 boyutlu parametrelere uygulanıp kaç parametreye uygulandığının yazılması; gradient accumulation ile küçük batch'lerden büyük bir batch'in gradient'inin toplanması ve loss'un neden accumulation adım sayısına bölündüğünün açıklanması. *(2:14:55 - 2:46:52)*
+4. **Ek Görev (Türkçe Metinde İki Tokenizer):** Aynı modelin Türkçe metinde bir kez GPT-2 tokenizer'ıyla, bir kez Hafta 9'da yazılan tokenizer'la aynı süre eğitilmesi; hangisinin metni daha çok gördüğünün ve loss'ların byte başına bit (bpb) üzerinden karşılaştırılması.
+---
+   
 ## Hafta 12: GPT-2'yi Gerçek Veriyle Eğitmek ve Ölçmek
 
 ### Kaynaklar

@@ -150,7 +150,6 @@ YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynakl
 4. **GPT-4 Regex Deseni:** Metnin önce GPT-4'ün deseniyle parçalara bölünüp BPE'nin her parçada ayrı çalıştırılması; tokenizer'ın yeniden eğitilip birleştirmelerin öncekiyle karşılaştırılması; "Ankara'dan" ve "İstanbul'da" gibi kesme işaretli kelimelerin bu desenle bölünüp İngilizce için yazılmış desenin Türkçede ne yaptığının yorumlanması. *(0:57:36 - 1:11:38)*
 5. **Türkçe ve İngilizce Karşılaştırması:** Aynı paragrafın Türkçesinin ve İngilizcesinin GPT-4 tokenizer'ıyla (`tiktoken`, `cl100k_base`) token'lanıp kelime başına düşen token sayısının bulunması; aynı Türkçe paragrafın kendi tokenizer'la token'lanması ve Türkçenin eklemeli yapısının sayılara etkisinin yorumlanması.
 ---
----
 
 ## Hafta 10: GPT-2 (124M) - Modeli Kurmak, Ağırlıkları Yüklemek ve Konuşturmak
 

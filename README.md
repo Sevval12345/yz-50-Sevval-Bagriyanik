@@ -197,4 +197,4 @@ YZ-50 süreci boyunca tamamlanan haftalık görevler, kodlar ve referans kaynakl
 2. **Doğrulama Loss'u ve Örnekleri Ekle:** Eğitim döngüsüne belirli aralıklarla val loss hesabı ve örnek metin üretimi eklenmesi; train ve val loss'larının aynı grafikte çizilmesi. *(3:23:10 - 3:28:23)*
 3. **Modeli Eğit:** Modelin sabit bir süre (1 saat) eğitilip görülen token, token/sn ve son loss'un raporlanması; eğitim ilerledikçe üretilen metnin nasıl değiştiğinin yazılması. *(3:28:23 - 3:43:05)*
 4. **HellaSwag'de Ölç:** HellaSwag'in (ilk 1000 örnek) önce kendi modelde, sonra OpenAI'ın GPT-2 ağırlıklarında çalıştırılması; rastgele tahminin %25 olduğu hatırlanarak aradaki farkın nedeninin yazılması. *(3:28:23 - 3:56:21)*
-5. **Ek Görev - Türkçe Model:** Aynı modelin Türkçe metinde eğitilip örnek metin alınması; HellaSwag İngilizce olduğu için Türkçe modelin nasıl ölçüleceğinin yazılması.
+5. **Ek Görev (Türkçe Model):** Aynı modelin Türkçe metinde eğitilip örnek metin alınması; HellaSwag İngilizce olduğu için Türkçe modelin nasıl ölçüleceğinin yazılması.
